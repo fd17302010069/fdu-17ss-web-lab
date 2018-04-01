@@ -1,0 +1,160 @@
+html,body,header,nav,main,section,footer,article,figure,p,h1,h3,figcaption,img{
+    margin:0;
+    padding:0;
+    border:0;
+    font-size:100%;
+    vertical-align:baseline;
+}
+
+body{
+    background:#E8EAF6;
+    padding-left: 5%;
+    padding-right: 5%;
+    min-width: 600px;
+}
+header{
+    color:white;
+    background: #1A237E;
+    padding-top:1em;
+    padding-left:1em;
+    padding-bottom:1em;
+}
+header h1{
+    font-size:1.5em;
+    font-family: sans-serif,serif;
+    display: inline;
+}
+header p{
+    font-family: "Times New Roman",serif;
+    font-style:italic;
+    display: inline;
+}
+nav ul{
+    list-style-type: none;
+    margin:0;
+    background: #3F51B5;
+    padding-bottom: 0.3em;
+    padding-top: 0.3em;
+    padding-left:0.7em;
+}
+nav ul li{
+    display: inline;
+}
+.link:link,.link:visited{
+    color:#00B0FF;
+    padding:0.3em;
+}
+.link:hover,.link:active{
+    color:white;
+    background: #F50057;
+}
+main{
+    border-color: white;
+    border-style: solid;
+    border-width: 0.5em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    background:white;
+}
+section h3{
+    color:white;
+    background: #7986CB;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left:1em;
+    margin:0;
+    text-transform: capitalize;
+}
+figcaption{
+    color:#7990A3;
+    background: #C5CAE9;
+    font-family: "Times New Roman",serif;
+    padding-left: 1em;
+    padding-bottom: 0.5em;
+    padding-top: 0.5em;
+}
+#sec1{
+    background: white;
+}
+#article1{
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 0.5em;
+    padding-bottom: 2.5em;
+    border-style: solid;
+    border-color: #C5CAE9;
+    border-width: 0.1em;
+    border-top-width: 0;
+    font-family: "Times New Roman",serif;
+}
+#intro a{
+    color:#00B0FF;
+    font-weight: bolder;
+}
+
+#option{
+    float:right;
+    padding-top: 1em;
+}
+#secRelated{
+    margin-top: 0.5em;
+    clear: both;
+}
+#secRelated p{
+    border-style: solid;
+    border-color: #C5CAE9;
+    border-width: 0.1em;
+    border-top-width: 0;
+}
+#secReview{
+    margin-top: 0.5em;
+}
+#reviews{
+    border-style: solid;
+    border-color: #C5CAE9;
+    border-width: 0.1em;
+    border-top-width: 0;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 1em;
+    font-family: "Times New Roman",serif;
+}
+.name{
+    color: #C5CAE9;
+    font-style: italic;
+}
+.date{
+    color: #F5A2C1;
+    font-style: italic;
+}
+hr{
+    margin: 0;
+}
+#reviews article{
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+.content{
+    padding-top: 0.5em;
+}
+footer{
+    color: white;
+    background: #1A237E;
+    padding-left: 1em;
+    padding-top: 1.3em;
+    padding-bottom: 1.3em;
+    font-size: small;
+}
+footer a{
+    color: #00B0FF;
+}
+#copy{
+    padding-top: 0.6em;
+}
+img{
+    vertical-align: middle;
+}
+figure img{
+    width: 100%;
+    height: auto;
+}

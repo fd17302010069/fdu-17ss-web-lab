@@ -4,80 +4,79 @@
 <head>
     <meta charset="UTF-8">
     <title>Share Your Travels</title>
+    <link rel="stylesheet" type="text/css" href="Lab03.css" />
 </head>
 
 <body>
 
     <header>
-        <h1>
-            <img src="images/logo.png" alt="logo" width="96" height="96" >
-            Share Your Travels
-        </h1>
+        <h1>Share Your Travels</h1>
+        <br />
+        <p>Let us know where you've been</p>
     </header>
 
     <nav><!--导航栏-->
         <ul>
-            <li><a href="#">Description</a></li>
-            <li><a href="#">Related Photos</a></li>
-            <li><a href="#">Reviews</a></li>
+            <li><a href="#sec1" class="link">Description</a></li><!--
+            --><li><a href="#secRelated" class="link">Related Photos</a></li><!--
+            --><li><a href="#secReview" class="link">Reviews</a></li>
         </ul>
     </nav>
 
-    <h2>New York - Central Park</h2>
-
-    <section>
-        <h3>Description</h3>
-        <article>
-            <p>Photo by Randy Connolly</p>
-            <p>This photo of Conservatory Pond in <a href="#">Central Park</a> in <a href="#">New York City</a>
-                was taken on October 22,2016 with a Canon EOS 30D camera.</p>
+    <main>
+        <section id="sec1">
+            <h3>NEW YORK - CENTRAL PARK</h3>
             <figure>
-                <img src="images/central-park.jpg" alt="central park" width="500" height="312">
+                <img src="images/large-central-park.jpg" alt="central park" width="1024" height="638">
                 <figcaption><i>Conservatory Pond in Central Park</i></figcaption>
             </figure>
-            <p>
-                Options:
-                <img src="images/icon_download.png" alt="download" width="18" height="18">
-                <img src="images/icon_mail.png" alt="mail" width="18" height="18">
-                <img src="images/icon_map.png" alt="map" width="18" height="18">
-                <img src="images/icon_up.png" alt="up" width="18" height="18">
-                <img src="images/icon_down.png" alt="down" width="18" height="18">
-            </p>
-        </article>
-    </section>
+            <article id="article1">
+                <p id="intro">
+                    This photo of Conservatory Pond in
+                    <a href="#">Central Park</a>
+                    in
+                    <a href="#">New York City</a>
+                    was taken on October 22,2016 with a Canon EOS 30D camera.
+                </p>
+                <p id="option">
+                    <img src="images/icon_download.png" alt="download" width="18" height="18">
+                    <img src="images/icon_mail.png" alt="mail" width="18" height="18">
+                    <img src="images/icon_map.png" alt="map" width="18" height="18">
+                    <img src="images/icon_up.png" alt="up" width="18" height="18">
+                    <img src="images/icon_down.png" alt="down" width="18" height="18">
+                </p>
+            </article>
+        </section>
 
-    <section>
-        <h3>Related Photos</h3>
-        <p>
-            <img src="images/related-square1.jpg" alt="related1" width="150" height="150">
-            <img src="images/related-square2.jpg" alt="related2" width="150" height="150">
-            <img src="images/related-square3.jpg" alt="related3" width="150" height="150">
-        </p>
-    </section>
+        <section id="secRelated">
+            <h3>RELATED PHOTOS</h3>
+            <p>
+                <img src="images/related-square1.jpg" alt="related1" width="150" height="150">
+                <img src="images/related-square2.jpg" alt="related2" width="150" height="150">
+                <img src="images/related-square3.jpg" alt="related3" width="150" height="150">
+            </p>
+        </section>
 
-    <section>
-        <h3>Reviews</h3>
-        <article>
-            <p>
-                <img src="images/icon_comment.png" alt="comment" width="18" height="18">
-                <b>Ricardo on 2016-5-23</b>
-            </p>
-            <p>Easy on the HDR buddy.</p>
-        </article>
-        <hr>
-        <article>
-            <p>
-                <img src="images/icon_comment.png" alt="comment" width="18" height="18">
-                <b>Susan on 2016-11-18</b>
-            </p>
-            <p>I love Central Park.</p>
-        </article>
-        <hr>
-    </section>
+        <section id="secReview">
+            <h3>REVIEWS</h3>
+            <div id="reviews">
+                <article>
+                    <p><span class="name">By Ricardo on</span> <span class="date">2016-5-23</span></p>
+                    <p class="content">Easy on the HDR buddy.</p>
+                </article>
+                <hr />
+                <article>
+                    <p><span class="name">By Susan on</span> <span class="date">2016-11-18</span></p>
+                    <p class="content">I love Central Park.</p>
+                </article>
+                <hr />
+            </div>
+        </section>
+    </main>
 
     <footer>
         <p><a href="#">Home</a> | <a href="#">Browse</a> | <a href="#">Search</a><p>
-        <p><i>Copyright &copy; 2017 Share Your Travels</i></p>
+        <p id="copy"><i>Copyright &copy; 2017 Share Your Travels</i></p>
     </footer>
 
 </body>
