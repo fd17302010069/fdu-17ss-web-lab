@@ -11,10 +11,135 @@
      <h1>Share Your Travels</h1>
      <p>let us know where you've been</p>
 </header>
+
 <main>
-   <section>
-   
-   </section>
+    <section>
+        <form name="photo_details" method="post" action="http://www.randyconnolly.com/tests/process.php">
+            <fieldset>
+                <legend>photo details</legend>
+                <table>
+                    <tbody>
+                    <tr>
+                        <td colspan="2">
+                            <p>
+                                <label for="title">Title</label>
+                                <br />
+                                <input type="text" name="title" id="title" value="Give your photo a descriptive name" />
+                            </p>
+                            <p>
+                                <label for="description">Description</label>
+                                <br />
+                                <textarea rows="5" name="description" id="description">Adding a rich description will help with search results</textarea>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>
+                                <label for="continent">Continent</label>
+                                <br />
+                                <select name="continent" id="continent">
+                                    <option>Choose continent</option>
+                                    <option>Africa</option>
+                                    <option>Antarctica</option>
+                                    <option>Asia</option>
+                                    <option>Australia</option>
+                                    <option>Europe</option>
+                                    <option>North America</option>
+                                    <option>South America</option>
+                                </select>
+                            </p>
+                            <p>
+                                <label for="country">Country</label>
+                                <br />
+                                <select name="country" id="country">
+                                    <option>Choose country</option>
+                                    <option>America</option>
+                                    <option>Britain</option>
+                                    <option>China</option>
+                                    <option>France</option>
+                                    <option>Russia</option>
+                                </select>
+                            </p>
+                            <p>
+                                <label for="city">City</label>
+                                <br />
+                                <input type="text" name="city" id="city" />
+                            </p>
+                        </td>
+                        <td>
+                            <div class="box">
+                                Copyright?
+                                <br />
+                                <input type="radio" name="copyright" value="reserved" id="reserved"/>
+                                <label for="reserved">All rights reserved</label>
+                                <br />
+                                <input type="radio" name="copyright" value="cc" id="cc"/>
+                                <label for="cc">Creative Commons</label>
+                            </div>
+                            <div class="box">
+                                Creative Commons Types
+                                <br />
+                                <input type="checkbox" name="cc_type" value="attr" id="attr" />
+                                <label for="attr">Attribution</label>
+                                <br />
+                                <input type="checkbox" name="cc_type" value="noncom" id="noncom" />
+                                <label for="noncom">Noncommercial</label>
+                                <br />
+                                <input type="checkbox" name="cc_type" value="no_derivative" id="no_derivative" />
+                                <label for="no_derivative">No Derivative Works</label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <div class="rectangle">
+                            <label for="accept">I accept the software license</label>
+                            <input type="checkbox" name="accept" id="accept" value="accept" />
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>
+                                <label for="rate">Rate this photo:</label>
+                                <br />
+                                <input type="number" name="rate" id="rate"/>
+                            </p>
+                            <p>
+                                <label for="color">Color Collection:</label>
+                                <br />
+                                <input type="color" name="color" id="color" />
+                            </p>
+                        </td>
+                        <td>
+                            <div  class="box">
+                            <p>
+                                <label for="date">Date Taken:</label>
+                                <br />
+                                <input type="date" name="date" id="date" />
+                            </p>
+                            <p>
+                                <label for="time">Time Taken:</label>
+                                <br />
+                                <input type="time" name="time" id="time" />
+                            </p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <div class="rectangle">
+                            <button type="submit" class="rounded">提交</button>
+                            <button type="reset" class="rounded">Clear Form</button>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </fieldset>
+        </form>
+    </section>
 </main>  
 
 

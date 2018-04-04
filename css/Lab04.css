@@ -76,7 +76,7 @@ form p {
 }
 
 table {
-  border: collapse;
+  border-collapse: collapse;
   border-spacing: 0;
   width: 100%;
   margin: 0 auto;
@@ -141,4 +141,9 @@ textarea {
 
 .rounded:hover {
   background-color: #FF4081;
+}
+
+/*additional*/
+input[type=number]{
+  width: 3.8em;
 }
