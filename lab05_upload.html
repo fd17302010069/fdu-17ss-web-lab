@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Share Your Travels</title>
+</head>
+
+<body>
+<header class="navbar navbar-expand-lg navbar-light container">
+    <div class="container">
+        <div class="navbar-header mx-auto">
+            <h1 class="container-fluid">Share Your Travels</h1>
+            <div class="text-center"><em>Let us know where you've been</em></div>
+        </div>
+
+        <nav class="navbar-collapse">
+            <ul class="nav navbar-nav container">
+                <li class="nav-item mx-auto"><a href="lab05_gallery.html" class="nav-link">Gallery</a></li>
+                <li class="nav-item mx-auto"><a href="#" class="nav-link">Feeling Lucky</a></li>
+                <li class="nav-item mx-auto"><a href="#" class="nav-link">User</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+    <section class="card">
+        <form name="photo_details" class="card-body">
+            <fieldset class="form-group">
+                <legend>Photo Details</legend>
+                <p>
+                    <label for="title">Title</label>
+                    <br />
+                    <input type="text" class ="form-control" name="title" id="title" value="Give your photo a descriptive name" />
+                </p>
+                <p>
+                    <label for="description">Description</label>
+                    <br />
+                    <textarea class ="form-control" name="description" id="description">Adding a rich description will help with search results</textarea>
+                </p>
+                <p>
+                    <label for="continent">Continent</label>
+                    <br />
+                    <select class ="form-control" name="continent" id="continent">
+                        <option>Choose continent</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="country">Country</label>
+                    <br />
+                    <select class ="form-control" name="country" id="country">
+                        <option>Choose country</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="city">City</label>
+                    <br />
+                    <input class ="form-control" type="text" name="city" id="city" />
+                </p>
+                <div class="box">
+                    <p>
+                        Copyright?
+                        <br />
+                        <input type="radio" name="copyright" value="reserved" id="reserved"/>
+                        <label for="reserved">All rights reserved</label>
+                        <br />
+                        <input type="radio" name="copyright" value="cc" id="cc"/>
+                        <label for="cc">Creative Commons</label>
+                    </p>
+                </div>
+                <div class="box">
+                    <p>
+                        Creative Commons Types
+                        <br />
+                        <input type="checkbox" name="cc_type" value="attr" id="attr" />
+                        <label for="attr">Attribution</label>
+                        <input type="checkbox" name="cc_type" value="noncom" id="noncom" />
+                        <label for="noncom">Noncommercial</label>
+                        <input type="checkbox" name="cc_type" value="no_derivative" id="no_derivative" />
+                        <label for="no_derivative">No Derivative Works</label>
+                    </p>
+                </div>
+                <div class="rectangle">
+                    <p>
+                        <input type="checkbox" name="accept" id="accept" value="accept" />
+                        <label for="accept">I accept the software license</label>
+                    </p>
+                </div>
+                <div class="row">
+                <p class="col-lg-3">
+                    <label for="rate">Rate this photo:</label>
+                    <br />
+                    <input class ="form-control" type="number" name="rate" id="rate"/>
+                </p>
+                <p class="col-lg-8 ml-auto">
+                    <label for="color">Color Collection:</label>
+                    <br />
+                    <input class ="form-control" type="color" name="color" id="color" />
+                </p>
+                </div>
+
+                <div class="row">
+                    <p class="col-lg-6">
+                        <label for="date">Date Taken:</label>
+                        <br />
+                        <input class ="form-control" type="date" name="date" id="date" />
+                    </p>
+                    <p class="col-lg-5 ml-auto">
+                        <label for="time">Time Taken:</label>
+                        <br />
+                        <input class ="form-control" type="time" name="time" id="time" />
+                    </p>
+                </div>
+
+                <div class="btn-group">
+                    <button type="submit" class="btn btn-secondary">Submit</button>
+                    <button type="reset" class="btn btn-secondary">Clear</button>
+                </div>
+            </fieldset>
+        </form>
+    </section>
+</main>
+
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+</html>
