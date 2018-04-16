@@ -58,20 +58,27 @@
     </div>
     </div>
 
-    <div class="col-lg">
+    <div class="col-lg-3">
 
     <div class="card card-deck">
     <section class="card-body">
         <h3 class="card-title">Related Photos</h3>
-        <div class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-            <div class="row carousel-item active">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+
+            <div class="carousel-inner">
+            <div class="carousel-item active">
                 <a href="images/related-large1.jpg"><img src="images/related-square1.jpg" class="img-fluid w-100" alt="related1" width="150" height="150"></a>
             </div>
-            <div class="row carousel-item">
+            <div class="carousel-item">
                 <a href="images/related-large2.jpg"><img src="images/related-square2.jpg" class="img-fluid w-100" alt="related2" width="150" height="150"></a>
             </div>
-            <div class="row carousel-item">
+            <div class="carousel-item">
                 <a href="images/related-large3.jpg"><img src="images/related-square3.jpg" class="img-fluid w-100" alt="related3" width="150" height="150"></a>
             </div>
         </div>
