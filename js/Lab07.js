@@ -20,6 +20,7 @@ function changeAction(){
         commit.style.display="none";
     }
     else if(select1.options[1].selected===true){
+        commit.style.display="none";
         createTable();
     }
     else if(select1.options[2].selected===true){
@@ -87,7 +88,7 @@ function createTable() {
     let attrBox=document.createElement("div");
     content1.appendChild(attrBox);
 
-    inputNumber.oninput=function () {
+    inputNumber.onchange=function () {
         attrBox.innerHTML="";
         if(inputNumber.value > 0){
             for(let i=0;i<inputNumber.value;i++){
@@ -97,10 +98,7 @@ function createTable() {
                 inputAttr.className="inputAttr";
                 attrBox.appendChild(inputAttr);
             }
-            commit.style.display="block";
-        }
-        else{
-            commit.style.display="none";
+            check();
         }
     };
 
@@ -122,6 +120,24 @@ function createTable() {
     }
 }
 
+function check() {
+    let inputBoxes=document.getElementsByTagName("input");
+    for (let num=0;num<inputBoxes.length;num++){
+        inputBoxes[num].onchange=function () {
+            let x=0;
+            for(;x<inputBoxes.length;x++){
+                if(inputBoxes[x].value===""){
+                    commit.style.display="none";
+                    return;
+                }
+            }
+            if(x===inputBoxes.length){
+                commit.style.display="block";
+            }
+        }
+    }
+}
+
 function addRow() {
     let index=select2.selectedIndex;
     if(index===0){
@@ -135,7 +151,7 @@ function addRow() {
     for(let i=0;i<currentTable.attr.length;i++){
         let inputAttr=document.createElement("input");
         inputAttr.type="text";
-        inputAttr.placeholder="Attr"+(i+1);
+        inputAttr.placeholder=currentTable.attr[i];
         inputAttr.className="inputAttr";
         attrBox.appendChild(inputAttr);
         commit.style.display="block";
