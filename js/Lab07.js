@@ -24,6 +24,7 @@ function changeAction(){
         createTable();
     }
     else if(select1.options[2].selected===true){
+        commit.style.display="none";
         addRow();
     }
     else if(select1.options[3].selected===true){
@@ -98,7 +99,7 @@ function createTable() {
                 inputAttr.className="inputAttr";
                 attrBox.appendChild(inputAttr);
             }
-            check();
+            checkAll();
         }
     };
 
@@ -120,7 +121,7 @@ function createTable() {
     }
 }
 
-function check() {
+function checkAll() {
     let inputBoxes=document.getElementsByTagName("input");
     for (let num=0;num<inputBoxes.length;num++){
         inputBoxes[num].onchange=function () {
@@ -133,6 +134,24 @@ function check() {
             }
             if(x===inputBoxes.length){
                 commit.style.display="block";
+            }
+        }
+    }
+}
+
+function checkOne() {
+    let inputBoxes=document.getElementsByTagName("input");
+    for (let num=0;num<inputBoxes.length;num++){
+        inputBoxes[num].onchange=function () {
+            let x=0;
+            for(;x<inputBoxes.length;x++){
+                if(inputBoxes[x].value!==""){
+                    commit.style.display="block";
+                    return;
+                }
+            }
+            if(x===inputBoxes.length){
+                commit.style.display="none";
             }
         }
     }
@@ -154,9 +173,9 @@ function addRow() {
         inputAttr.placeholder=currentTable.attr[i];
         inputAttr.className="inputAttr";
         attrBox.appendChild(inputAttr);
-        commit.style.display="block";
     }
-    
+    checkOne();
+
     commit.onclick=function () {
         let newRow=[];
         let attrList=document.getElementsByClassName("inputAttr");
