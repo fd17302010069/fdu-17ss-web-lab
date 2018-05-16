@@ -18,12 +18,14 @@
 
 <body>
     <!-- include header here -->
+	<?php include 'header.inc.php'; ?>
 
     <!-- Page Content -->
     <main class="container">
         <div class="row">
     
-        <!-- include left here -->          
+        <!-- include left here -->   
+		<?php include 'left.inc.php'; ?>
     
             <div class="col-md-10">
                 <div class="jumbotron" id="postJumbo">
