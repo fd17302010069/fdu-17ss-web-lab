@@ -13,17 +13,17 @@ function outputPostRow($number)  {
 	$content = "";
 	$content .= '<div class="row"><div class="col-md-4">';
 	$img = '<img src="images/'.${'thumb'.$number}.'" alt="'.${'title'.$number}.'" class="img-responsive"/>';
-	$content .=generateLink('post.php?id=1',$img,'');
+	$content .=generateLink('post.php?id='.${'postId'.$number},$img,'');
 	$content .='</div>';
 	$content .='<div class="col-md-8"><h2>'.${'title'.$number}.'</h2>';
 	$content .='<div class="details">Posted by ';
-	$content .=generateLink('user.php?id=2',${'userName'.$number},'');
+	$content .=generateLink('user.php?id='.${'userId'.$number},${'userName'.$number},'');
 	$content .='<span class="pull-right">'.${'date'.$number}.'</span>';
 	$content .='<p class="ratings">';
 	$content .=constructRating(${'reviewsRating'.$number});
 	$content .=' '.${'reviewsNum'.$number}.' Reviews</p></div>';
 	$content .='<p class="excerpt">'.${'excerpt'.$number}.'</p>';
-	$content .='<p>'.generateLink('post.php?id=1','Read more','btn btn-primary btn-sm').'</p>';
+	$content .='<p>'.generateLink('post.php?id='.${'postId'.$number},'Read more','btn btn-primary btn-sm').'</p>';
 	$content .='</div></div><hr/>';
 	echo $content;
 }
