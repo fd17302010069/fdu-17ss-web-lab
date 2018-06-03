@@ -3,7 +3,10 @@
 
 //****** Hint ******
 //connect database and fetch data here
-
+$mysqli = new mysqli("localhost","root","","travel");
+$result = $mysqli -> query("SELECT * FROM Continents");
+$countryList = $mysqli -> query("SELECT * FROM Countries");
+$imageList = $mysqli -> query("SELECT * FROM ImageDetails");
 
 ?>
 
@@ -29,7 +32,7 @@
 
 <body>
     <?php include 'header.inc.php'; ?>
-    
+
 
 
     <!-- Page Content -->
@@ -60,7 +63,12 @@
                 //Fill this place
 
                 //****** Hint ******
-                /* display list of countries */ 
+                /* display list of countries */
+
+                while($row = $countryList->fetch_assoc()) {
+                    echo '<option value=' . $row['ISO'] . '>' . $row['CountryName'] . '</option>';
+                }
+
                 ?>
               </select>    
               <input type="text"  placeholder="Search title" class="form-control" name=title>
@@ -78,6 +86,7 @@
 
             //****** Hint ******
             /* use while loop to display images that meet requirements ... sample below ... replace ???? with field data
+
             <li>
               <a href="detail.php?id=????" class="img-responsive">
                 <img src="images/square-medium/????" alt="????">
@@ -89,7 +98,69 @@
                 </div>
               </a>
             </li>        
-            */ 
+            */
+
+            function displayImage($row){
+                echo '<li>
+                        <a href="detail.php?id='.$row['ImageID'].'" class="img-responsive">
+                            <img src="images/square-medium/'.$row['Path'].'" alt="'.$row['Title'].'">
+                            <div class="caption">
+                                <div class="blur"></div>
+                                <div class="caption-text">
+                                    <p>'.$row['Title'].'</p>
+                                </div>
+                            </div>
+                        </a>
+                       </li> ';
+            }
+
+            function filter(){
+                if($_GET['continent']==="0"){
+                    if($_GET['country']==="0"){
+                        global $imageList;
+                        while($row = $imageList -> fetch_assoc()) {
+                            displayImage($row);
+                        }
+                    }
+                    else{
+                        global $mysqli;
+                        $countryCode=$_GET['country'];
+                        $imageList = $mysqli -> query("SELECT * FROM ImageDetails WHERE CountryCodeISO='$countryCode'");
+                        while($row = $imageList -> fetch_assoc()) {
+                            displayImage($row);
+                        }
+                    }
+                }
+                else{
+                    if($_GET['country']==="0"){
+                        global $mysqli;
+                        $continentCode=$_GET['continent'];
+                        $imageList = $mysqli -> query("SELECT * FROM ImageDetails WHERE ContinentCode='$continentCode'");
+                        while($row = $imageList -> fetch_assoc()) {
+                            displayImage($row);
+                        }
+                    }
+                    else{
+                        global $mysqli;
+                        $continentCode=$_GET['continent'];
+                        $countryCode=$_GET['country'];
+                        $imageList = $mysqli -> query("SELECT * FROM ImageDetails WHERE ContinentCode='$continentCode' AND CountryCodeISO='$countryCode'");
+                        while($row = $imageList -> fetch_assoc()) {
+                            displayImage($row);
+                        }
+                    }
+                }
+            }
+
+            if(!isset($_GET['continent']) && !isset($_GET['country'])){
+                while($row = $imageList -> fetch_assoc()) {
+                    displayImage($row);
+                }
+            }
+            else if(isset($_GET['continent']) && isset($_GET['country'])){
+                filter();
+            }
+
             ?>
        </ul>       
 
