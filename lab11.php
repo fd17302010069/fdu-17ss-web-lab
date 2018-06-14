@@ -236,16 +236,22 @@ function changeBtn(){
 select.onchange=function () {
     changeBtn();
     changeSRC();
+    count=0;
+    document.getElementById("lyric").scrollTop=0;
 };
 preBtn.onclick=function () {
     select.options[select.selectedIndex-1].selected=true;
     changeBtn();
     changeSRC();
+    count=0;
+    document.getElementById("lyric").scrollTop=0;
 };
 nextBtn.onclick=function () {
     select.options[select.selectedIndex+1].selected=true;
     changeBtn();
     changeSRC();
+    count=0;
+    document.getElementById("lyric").scrollTop=0;
 };
 
 /* HINT: 
